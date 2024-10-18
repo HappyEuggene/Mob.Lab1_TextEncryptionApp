@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TextEncryptionApp.AboutPage"
+    Title="Про розробника">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+            <!-- Фото розробника -->
+            <Image Source="Resources/Images/developer_photo.jpg"
+                   WidthRequest="300"
+                   HeightRequest="300"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center" />
+
+            <!-- Інформація про розробника -->
+            <Label Text="Eugene Somkin"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="4th year student of KNU, TTP-42"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

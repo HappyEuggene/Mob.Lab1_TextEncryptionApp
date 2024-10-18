@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextEncryptionApp.MainPage"
+             Title="Шифрування тексту">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <!-- Заголовок -->
+            <Label Text="Шифрування тексту" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center" />
+
+            <!-- Вибір методу шифрування -->
+            <Label Text="Оберіть метод шифрування:" />
+            <Picker x:Name="encryptionMethodPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Цезаря</x:String>
+                        <x:String>Віженера</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Введення тексту -->
+            <Label Text="Введіть текст:" />
+            <Editor x:Name="inputText" 
+                    HeightRequest="100" />
+
+            <!-- Введення ключа -->
+            <Label Text="Введіть ключ:" />
+            <Entry x:Name="keyEntry" 
+                   Placeholder="Ключ" />
+
+            <!-- Кнопки -->
+            <Button Text="Зчитати з файлу" 
+                    Clicked="OnReadFromFileClicked" />
+            <Button Text="Зашифрувати" 
+                    Clicked="OnEncryptClicked" />
+            <Button Text="Дешифрувати" 
+                    Clicked="OnDecryptClicked" />
+            <Button Text="Про розробника" 
+                    Clicked="OnAboutClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

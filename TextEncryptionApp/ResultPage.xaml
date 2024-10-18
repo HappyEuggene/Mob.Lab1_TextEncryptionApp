@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TextEncryptionApp.ResultPage"
+    Title="Результат">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <!-- Заголовок -->
+            <Label Text="Результат:" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center" />
+
+            <!-- Відображення результату -->
+            <Editor x:Name="resultEditor" 
+                    HeightRequest="100" 
+                    IsReadOnly="True" />
+
+            <!-- Кнопка збереження -->
+            <Button Text="Зберегти у файл" 
+                    Clicked="OnSaveToFileClicked" />
+
+            <!-- Графічна візуалізація -->
+            <Label Text="Графічна візуалізація:" 
+                   FontSize="Medium" />
+            <ScrollView Orientation="Horizontal">
+                <StackLayout x:Name="graphLayout" 
+                             Orientation="Horizontal" 
+                             Spacing="2" />
+            </ScrollView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
